@@ -8,5 +8,75 @@
   background-color: red;
   width: 140px;
   height: 50px;
+  position: relative;
+  top: 100px;
+  left: 100px;
+  border-top-left-radius: 35px 10px;
+  border-top-right-radius: 40px 8px;
+  border-bottom-right-radius: 40px 8px;
+  border-bottom-left-radius: 35px 10px;
 }
 
+.car::before, .car::after {
+  content: '';
+  background-color: grey;
+  width: 16px;
+  height: 53px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  z-index: -1;
+}
+
+.car::after {
+  left: 78%;
+}
+
+.car::before {
+  left: 25%;
+}
+
+.car__windshield {
+  background: linear-gradient(to right, aqua, white);
+  height: 35px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border-top-left-radius: 35px 0px;
+  border-top-right-radius: 35px 20px;
+  border-bottom-right-radius: 35px 20px;
+  border-bottom-left-radius: 35px 0px;
+}
+
+.car__windshield-front {
+  top: 50%;
+  left: 73%;
+  width: 18px;
+}
+
+
+.car__windshield-back {
+  top: 15%;
+  left: 15%;
+  width: 15px;
+  transform: scale(-1, 1);
+}
+
+.car__lamp {
+  width: 90px;
+  height: 50px;
+  background: linear-gradient(to right, rgb(255, 255, 0), transparent);
+  left: 90%;
+  top: 30%;
+  position: absolute;
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+  z-index: -1;
+}
+
+.car__lamp-bottom {
+  top: 30%;
+}
+
+.car__lamp-top {
+  top: -30%;
+}
